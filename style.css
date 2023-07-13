@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    min-width: 320px;
+    /* min-width: 320px; */
     font-size: 1rem;
     letter-spacing: 0.01em;
     line-height: 1.6;
@@ -47,6 +47,14 @@ li {
     list-style: none;
 }
 
+a {
+    color: var(--wht);
+}
+
+a:hover {
+    color: hotpink;
+}
+
 /*typography*/
 
 .thin {
@@ -56,12 +64,54 @@ li {
 .bold {
     font-weight: 700;
 }
+
+h1 {
+    color: var(--wht);
+}
 /*layout*/
 .container {
     width: 90%;
     max-width: 1024px;
     margin: 0 auto;
 }
+
+header {
+    background-color: var(--blk);
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction:row ;
+    align-items:center ;
+}
+
+header li {
+ margin: 0 1rem;
+}
 /*mediaqueries*/
 
+@media (min-width: 620px) {
+    header {
+        padding: 2rem 0;
+    }
 
+    .header-container {
+        /* display: flex; */
+        flex-direction:row ;
+        justify-content: space-between;
+        align-items:baseline ;
+    }
+    h1 {
+       margin-bottom: unset;
+}
+}
+
+/* @media (possition: lanscape) check more about orientatio as this is wrong query */
+/* @media (max-width: 800px) {
+    a {
+        color: orange;
+    }
+} */
+
+/*check unset option with flex*/
